@@ -10,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php the_title(); ?></title>
   </head>
-  <body>
+  <body <?php body_class(); ?>>
 
     <!-- header -->
-    <header class="container_full">
-      <div class="container header_inner">
+    <header class="container-full" id="header">
+      <div class="container header-inner">
         <!-- logo -->
         <img src="<?php the_field('header_logo', 'option'); ?>" alt="logo">
         <!-- navigation -->

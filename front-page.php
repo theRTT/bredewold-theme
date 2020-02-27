@@ -8,13 +8,13 @@ if( have_rows('content_builder') ):
     //banner
     if( get_row_layout() == 'banner' ):
       //load template part
-      get_template_part('template-parts/banner');
+      get_template_part('template-parts/banner/banner');
 
-    //intro
-    elseif( get_row_layout() == 'intro' ):
+    //text
+    elseif( get_row_layout() == 'text' ):
       //load template part
-      get_template_part('template-parts/intro');
-    
+      get_template_part('template-parts/text/text');
+
     endif;
   endwhile;
 else :

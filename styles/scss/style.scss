@@ -1,3 +1,7 @@
+/* ------------------------------------------------------
+                    standard styles
+------------------------------------------------------ */
+
 $white: #ffffff;
 $ant: #444444;
 $gray: #969696;
@@ -10,17 +14,76 @@ $font: 'Poppins', sans-serif;
   padding:0px;
 }
 
+//buttons and links
+.reg-btn{
+  display: inline-block;
+  color:$white;
+  padding: 10px 15px 10px 15px;
+  text-transform: lowercase;
+  border:1px solid $white;
+  background-color:rgba(255,255,255,0.16);
+  transition: .2s ease;
+  margin-left: 5px;
+  margin-right: 5px;
+  &:first-child{
+    margin-left: 0px;
+  }
+  &:last-child{
+    margin-right: 0px;
+  }
+  &:hover{
+    color:$ant;
+    background-color:rgba(255,255,255,1);
+  }
+}
+
 a{
   color: inherit;
   text-decoration: none;
 }
 
-//header
+
+//admin bar active
+.admin-bar{
+  header{
+    top:32px;
+  }
+}
+
+//text styles
+article{
+  font-family: $font;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h1{
+  font-size: 32px;
+  line-height: 25px;
+}
+
+h2{
+  font-size: 28px;
+  line-height: 23px;
+}
+
+h3{
+  font-size: 24px;
+  line-height: 19px;
+}
+
+/* ------------------------------------------------------
+                        header
+------------------------------------------------------ */
 header{
   padding-top:20px;
   padding-bottom: 20px;
   box-shadow: 0px 3px 6px rgba(00,00,00,0.16);
-  .header_inner{
+  background-color: rgba(255,255,255,1.0);
+  transition: .2s ease;
+  z-index: 3;
+  position: sticky;
+  .header-inner{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,13 +109,23 @@ header{
   }
 }
 
-//home banner
-#home_banner{
-  display: -ms-flexbox;
-  display: -webkit-flex;
+//header on scroll
+.scroll{
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.nonscroll{
+  top:inherit;
+  z-index: inherit;
+  position: inherit;
+}
+
+/* ------------------------------------------------------
+                        Banners
+------------------------------------------------------ */
+#standard-banner{
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -63,14 +136,21 @@ header{
   background-position: center;
   background-repeat: no-repeat;
   font-family: $font;
+  position: relative;
   h1{
     font-size: 70px;
     font-weight: 700;
+    line-height: 70px;
     color:$white;
+    text-align: center;
+    z-index: 1;
   }
-  #banner_buttons{
+  #banner-buttons{
     display: flex;
     justify-content: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    z-index: 1;
     a{
       display: inline-block;
       color:$white;
@@ -92,5 +172,68 @@ header{
         background-color:rgba(255,255,255,1);
       }
     }
+  }
+  //overlay
+  &:before{
+    content:"";
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0px;
+    bottom:0px;
+    z-index: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+  }
+}
+
+/* ------------------------------------------------------
+                      slider banner
+------------------------------------------------------ */
+
+#slider-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 480px;
+  max-height: 700px;
+  .swiper-slide{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .image{
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .slide-content{
+
+    }
+  }
+}
+
+/* ------------------------------------------------------
+                    centered text
+------------------------------------------------------ */
+.centered-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  article{
+    font-weight: 300;
+    max-width: 700px;
+    text-align: center;
+    p{
+      margin-top:10px;
+    }
+  }
+  a{
+    font-family: $font;
   }
 }

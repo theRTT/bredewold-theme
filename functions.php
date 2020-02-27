@@ -11,6 +11,7 @@ function bredewold_files() {
   // scripts
   wp_enqueue_script( 'main-script', get_theme_file_uri( '/scripts/script.js' ), array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'swiper', get_theme_file_uri( '/scripts/swiper.min.js' ), array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'swiper', get_theme_file_uri( '/scripts/swiper.js' ), array( 'jquery' ), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'bredewold_files' );
 
