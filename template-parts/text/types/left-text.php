@@ -1,4 +1,4 @@
-<section class="container gen-text centered-text">
+<section class="container gen-text left-text">
   <article>
     <?php the_sub_field('content');?>
   </article>

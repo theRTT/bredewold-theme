@@ -11,7 +11,6 @@ function bredewold_files() {
   // scripts
   wp_enqueue_script( 'main-script', get_theme_file_uri( '/scripts/script.js' ), array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'swiper', get_theme_file_uri( '/scripts/swiper.min.js' ), array( 'jquery' ), '1', true );
-	wp_enqueue_script( 'swiper', get_theme_file_uri( '/scripts/swiper.js' ), array( 'jquery' ), '1', true );
 }
 add_action( 'wp_enqueue_scripts', 'bredewold_files' );
 
@@ -63,5 +62,21 @@ add_action( 'init', 'bredewold_menus' );
 
 //add thumbnail support
 add_theme_support( 'post-thumbnails' );
+
+
+//add style to acf
+function my_acf_admin_head() {
+    ?>
+    <style type="text/css">
+
+    .button-choice{
+			background-color:#EDEDED;
+		}
+
+    </style>
+    <?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
 
 ?>
