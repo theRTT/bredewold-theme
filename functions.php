@@ -69,10 +69,9 @@ function my_acf_admin_head() {
     ?>
     <style type="text/css">
 
-    .button-choice{
+    /*.button-choice{
 			background-color:#EDEDED;
-		}
-
+		}*/
     </style>
     <?php
 }

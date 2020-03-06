@@ -190,18 +190,14 @@ header .header-inner nav ul li a {
                           text
 ------------------------------------------------------ */
 .gen-text {
-  display: grid;
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 70px;
   padding-bottom: 70px;
-}
-.gen-text article {
   font-weight: 300;
-  max-width: 700px;
-  text-align: center;
 }
-.gen-text article p {
-  margin-top: 10px;
+.gen-text p {
+  max-width: 700px;
 }
 .gen-text .button-wrapper {
   display: flex;
@@ -219,25 +215,16 @@ header .header-inner nav ul li a {
   background-color: #444444;
 }
 
-.centered-text {
+#text-left {
+  justify-content: flex-start;
+}
+
+#text-centered {
   justify-content: center;
 }
-.centered-text article {
-  text-align: center;
-}
 
-.right-text {
-  justify-content: right;
-}
-.right-text article {
-  text-align: right;
-}
-
-.left-text {
-  justify-content: left;
-}
-.left-text article {
-  text-align: left;
+#text-right {
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

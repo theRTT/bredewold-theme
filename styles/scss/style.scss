@@ -209,19 +209,14 @@ header{
 /* ------------------------------------------------------
                           text
 ------------------------------------------------------ */
-//general text style
 .gen-text{
-  display: grid;
-  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 70px;
   padding-bottom: 70px;
-  article{
-    font-weight: 300;
+  font-weight: 300;
+  p{
     max-width: 700px;
-    text-align: center;
-    p{
-      margin-top:10px;
-    }
   }
   .button-wrapper{
     display: flex;
@@ -240,26 +235,17 @@ header{
   }
 }
 
+//left-text
+#text-left{
+  justify-content: flex-start;
+}
+
 //centered text
-.centered-text{
+#text-centered{
   justify-content: center;
-  article{
-    text-align: center;
-  }
 }
 
 //right-text
-.right-text{
-  justify-content: right;
-  article{
-    text-align: right;
-  }
-}
-
-//left-text
-.left-text{
-  justify-content: left;
-  article{
-    text-align: left;
-  }
+#text-right{
+  justify-content: flex-end;
 }
