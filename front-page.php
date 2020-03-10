@@ -15,6 +15,11 @@ if( have_rows('content_builder') ):
       //load template part
       get_template_part('template-parts/text/text');
 
+    //text
+    elseif( get_row_layout() == 'posts' ):
+      //load template part
+      get_template_part('template-parts/posts/posts');
+
     endif;
   endwhile;
 else :
