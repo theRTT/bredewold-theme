@@ -10,9 +10,9 @@ if( have_rows('posts') ):
       get_template_part('template-parts/posts/types/standard-posts');
 
     //slider banner
-    elseif( get_row_layout() == 'slider_banner' ):
+    elseif( get_row_layout() == 'masonry_posts' ):
       //load template part
-      get_template_part('template-parts/banner/types/slider-banner');
+      get_template_part('template-parts/posts/types/masonry-posts');
 
     endif;
   endwhile;

@@ -1,6 +1,6 @@
-<section class="standard-post-wrapper">
+<section class="masonry-post-wrapper">
   <div class="container">
-    <div class="standerd-post-inner">
+    <div class="masonry-post-inner">
       <?php
 
         $amount = get_sub_field('amount');
